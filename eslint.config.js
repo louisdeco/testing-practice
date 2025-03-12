@@ -11,6 +11,14 @@ export default [
       },
     },
   },
+  {
+    files: ["**/*.test.js", "**/*.spec.js", "test/**/*.js"],
+    languageOptions: {
+      globals: {
+        ...globals.jest, // This is the correct way to add Jest globals in flat config
+      },
+    },
+  },
   js.configs.recommended,
   eslintConfigPrettier,
 ];
